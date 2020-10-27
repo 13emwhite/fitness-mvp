@@ -1,9 +1,8 @@
 import React from 'react';
-import Table from 'react-bootstrap/Table';
-
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+import Table from 'react-bootstrap/Table';
 import Favorite from '@material-ui/icons/Favorite';
 
 
