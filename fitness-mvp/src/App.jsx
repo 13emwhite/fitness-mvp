@@ -1,5 +1,4 @@
 import './App.css';
-// import logo from './logo.svg';
 
 import React from 'react';
 import Workouts from './Workouts.jsx';
@@ -15,7 +14,6 @@ class App extends React.Component {
   render() {
     return (
       <Container>
-        <h1 className='title'>Emily White MVP</h1>
         <h1 className='title'>Fitness Improvement Training</h1>
         <p>Welcome to F.I.T. where we have workouts for everyday</p>
         <Row>
