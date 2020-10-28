@@ -16,6 +16,8 @@ class App extends React.Component {
     return (
       <Container>
         <h1 className='title'>Emily White MVP</h1>
+        <h1 className='title'>Fitness Improvement Training</h1>
+        <p>Welcome to F.I.T. where we have workouts for everyday</p>
         <Row>
           <Col sm={6}>
             <Workouts />
