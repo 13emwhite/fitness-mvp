@@ -8,7 +8,6 @@ CREATE TABLE workouts (
 );
 
 INSERT INTO workouts (workout_id, category, exercise, reps, rounds) VALUES (1, 'Upper Body', 'bicep curl', 10, 4);
-
 INSERT INTO workouts (workout_id, category, exercise, reps, rounds) VALUES (1, 'Upper Body', 'sholder press', 8, 3);
 INSERT INTO workouts (workout_id, category, exercise, reps, rounds) VALUES (1, 'Upper Body', 'tricep extension', 10, 3);
 INSERT INTO workouts (workout_id, category, exercise, reps, rounds) VALUES (1, 'Upper Body', 'chest press', 8, 4);
