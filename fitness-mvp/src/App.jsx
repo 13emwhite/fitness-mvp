@@ -4,6 +4,7 @@ import React from 'react';
 import Workouts from './Workouts.jsx';
 import Test from './Test.jsx';
 import ModalWindow from './ModalWindow.jsx';
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -14,8 +15,8 @@ class App extends React.Component {
   render() {
     return (
       <Container>
-        <h1 className='title'>Fitness Improvement Training</h1>
-        <p>Welcome to F.I.T. where we have workouts for everyday</p>
+        <h1 className='title'><FitnessCenterIcon/> Fitness Improvement Training <FitnessCenterIcon/></h1>
+        {/* <p>Welcome to F.I.T. where we have workouts for everyday</p> */}
         <Row>
           <Col sm={6}>
             <Workouts />
