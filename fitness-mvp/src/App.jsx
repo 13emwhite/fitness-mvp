@@ -94,14 +94,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1 className='title'><FitnessCenterIcon/> Fitness Improvement Training <FitnessCenterIcon/></h1>
+        <h1 className='title'><FitnessCenterIcon/><strong>Fitness Improvement Training</strong> <FitnessCenterIcon/></h1>
         <p className='title'>Welcome to FIT, an online platform for all of your workout needs!</p>
         <br></br>
         <div id="nav">
-        <p id="home">Home</p>
-        <p id="upper">Upper Body</p>
-        <p id="lower">Lower Body</p>
-        <p id="abs">Abs</p>
+          <strong><p id="home">Home</p></strong>
+          <strong><p id="upper">Upper Body</p></strong>
+          <strong><p id="lower">Lower Body</p></strong>
+          <strong><p id="abs">Abs</p></strong>
         </div>
         <Workouts workoutList={this.state.workouts}/>
         <ModalWindow
