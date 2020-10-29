@@ -1,4 +1,5 @@
 .title{
+  color: #9370DB;
   text-align: center;
 }
 
@@ -28,4 +29,29 @@
 #modal {
   display: inline;
   margin-left: 50px;
+}
+
+#nav{
+  border: solid black;
+  width: 100px;
+}
+
+#abs{
+  background-color: lightgreen;
+  text-align: center;
+}
+
+#upper{
+  background-color: lightblue;
+  text-align: center;
+}
+
+#lower{
+  background-color: lightpink;
+  text-align: center;
+}
+
+#home{
+  background-color: #9370DB;
+  text-align: center;
 }

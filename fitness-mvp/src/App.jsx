@@ -97,10 +97,12 @@ class App extends React.Component {
         <h1 className='title'><FitnessCenterIcon/> Fitness Improvement Training <FitnessCenterIcon/></h1>
         <p className='title'>Welcome to FIT, an online platform for all of your workout needs!</p>
         <br></br>
-        <p>Home</p>
-        <p>Upper Body</p>
-        <p>Lower Body</p>
-        <p>Abs</p>
+        <div id="nav">
+        <p id="home">Home</p>
+        <p id="upper">Upper Body</p>
+        <p id="lower">Lower Body</p>
+        <p id="abs">Abs</p>
+        </div>
         <Workouts workoutList={this.state.workouts}/>
         <ModalWindow
           id={this.state.workout_id}
