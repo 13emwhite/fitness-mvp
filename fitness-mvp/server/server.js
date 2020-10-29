@@ -19,8 +19,26 @@ app.get('/workouts', function(req, res) {
 })
 
 // get workouts based off workout id
+// app.get('/workouts/:id', function(req, res) {
+//   db.selectWorkoutId(req.params.id, function(error, data) {
+//     if (error) {
+//       res.sendStatus(500);
+//     } else {
+//       res.send(data);
+//     }
+//   })
+// })
 
 // get upper body workouts
+// app.get('/workouts/:category', function(req, res) {
+//   db.selectWorkoutId(req.params.category, function(error, data) {
+//     if (error) {
+//       res.sendStatus(500);
+//     } else {
+//       res.send(data);
+//     }
+//   })
+// })
 
 // get lower body workouts
 

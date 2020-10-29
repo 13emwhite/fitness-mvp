@@ -2,13 +2,44 @@
   text-align: center;
 }
 
-#workout{
+/* upper body: */
+#upper_workout{
+  font-size: 20px;
+  text-align: left;
+  background-color: lightblue;
+  width: 400px;
+}
+
+#upper{
   font-size: 20px;
 }
 
-#test{
+/* lower body: */
+#lower_workout{
+  font-size: 20px;
+  text-align: center;
+  background-color: lightpink;
+  width: 400px;
+}
+
+#lower{
   font-size: 20px;
 }
+
+#abs_workout{
+  font-size: 20px;
+  text-align: center;
+  background-color: lightgreen;
+  width: 400px;
+}
+
+#abs{
+  font-size: 20px;
+}
+
+/* #table{
+
+} */
 
 #modal {
   display: inline;

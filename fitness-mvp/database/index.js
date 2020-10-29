@@ -27,8 +27,8 @@ var allWorkouts = function(callback) {
 }
 
 // get workouts based off workout id
-// var selectWorkout = function(id, callback) {
-//   connection.query(`SELECT * FROM workouts WHERE workout_id=?`, [id], function(error, results {
+// var selectWorkoutId = function(id, callback) {
+//   connection.query(`SELECT * FROM workouts WHERE id=?`, [id], function(error, results) {
 //     if (error) {
 //       callback(error, null);
 //     } else {
@@ -38,6 +38,15 @@ var allWorkouts = function(callback) {
 // }
 
 // get all upper body workouts
+// var categoryWorkout = function(category, callback) {
+//   connection.query(`SELECT * FROM workouts WHERE category=?`, [category], function(error, results) {
+//     if (error) {
+//       callback(error, null);
+//     } else {
+//       callback(null, results);
+//     }
+//   })
+// }
 
 // get all lower body workouts
 
@@ -46,5 +55,7 @@ var allWorkouts = function(callback) {
 // post a new workout
 
 module.exports = {
-  allWorkouts
+  allWorkouts,
+  // selectWorkoutId,
+  // categoryWorkout
 };
