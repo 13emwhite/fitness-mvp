@@ -11,6 +11,7 @@ const WorkoutForm = (props) => {
         <Form.Control
         type="text"
         placeholder="Workout ID Name"
+        required
         value={props.idValue}
         onChange={props.changeIdValue}
         />
@@ -18,6 +19,7 @@ const WorkoutForm = (props) => {
         <Form.Control
         type="text"
         placeholder="Category Name"
+        required
         value={props.categoryValue}
         onChange={props.changeCategoryValue}
         />
@@ -25,6 +27,7 @@ const WorkoutForm = (props) => {
         <Form.Control
         type="text"
         placeholder="Exercise Name"
+        required
         value={props.exerciseValue}
         onChange={props.changeExerciseValue}
         />
@@ -32,6 +35,7 @@ const WorkoutForm = (props) => {
          <Form.Control
          type="text"
          placeholder="Total Reps"
+         required
          value={props.repsValue}
          onChange={props.changeRepsValue}
         />
@@ -39,6 +43,7 @@ const WorkoutForm = (props) => {
          <Form.Control
          type="text"
          placeholder="Total Rounds"
+         required
          value={props.roundsValue}
          onChange={props.changeRoundsValue}/>
       </Form.Group>
@@ -48,6 +53,7 @@ const WorkoutForm = (props) => {
         <Form.Control
         type="text"
         placeholder="Workout ID Name"
+        required
         value={props.idValue}
         onChange={props.changeIdValue}
         />
@@ -55,6 +61,7 @@ const WorkoutForm = (props) => {
         <Form.Control
         type="text"
         placeholder="Category Name"
+        required
         value={props.categoryValue}
         onChange={props.changeCategoryValue}
         />
@@ -62,6 +69,7 @@ const WorkoutForm = (props) => {
         <Form.Control
         type="text"
         placeholder="Exercise Name"
+        required
         value={props.exerciseValue}
         onChange={props.changeExerciseValue}
         />
@@ -69,6 +77,7 @@ const WorkoutForm = (props) => {
          <Form.Control
          type="text"
          placeholder="Total Reps"
+         required
          value={props.repsValue}
          onChange={props.changeRepsValue}
         />
@@ -76,6 +85,7 @@ const WorkoutForm = (props) => {
          <Form.Control
          type="text"
          placeholder="Total Rounds"
+         required
          value={props.roundsValue}
          onChange={props.changeRoundsValue}/>
       </Form.Group>
@@ -85,6 +95,7 @@ const WorkoutForm = (props) => {
         <Form.Control
         type="text"
         placeholder="Workout ID Name"
+        required
         value={props.idValue}
         onChange={props.changeIdValue}
         />
@@ -92,6 +103,7 @@ const WorkoutForm = (props) => {
         <Form.Control
         type="text"
         placeholder="Category Name"
+        required
         value={props.categoryValue}
         onChange={props.changeCategoryValue}
         />
@@ -99,6 +111,7 @@ const WorkoutForm = (props) => {
         <Form.Control
         type="text"
         placeholder="Exercise Name"
+        required
         value={props.exerciseValue}
         onChange={props.changeExerciseValue}
         />
@@ -106,6 +119,7 @@ const WorkoutForm = (props) => {
          <Form.Control
          type="text"
          placeholder="Total Reps"
+         required
          value={props.repsValue}
          onChange={props.changeRepsValue}
         />
@@ -113,6 +127,7 @@ const WorkoutForm = (props) => {
          <Form.Control
          type="text"
          placeholder="Total Rounds"
+         required
          value={props.roundsValue}
          onChange={props.changeRoundsValue}/>
       </Form.Group>
