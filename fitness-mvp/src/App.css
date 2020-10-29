@@ -4,43 +4,28 @@
 
 /* upper body: */
 #upper_workout{
-  font-size: 15px;
-  text-align: left;
   background-color: lightblue;
-  width: 400px;
-}
-
-#upper{
   font-size: 15px;
+  margin: auto;
+  width: 450px;
 }
 
 /* lower body: */
 #lower_workout{
-  font-size: 15px;
-  text-align: left;
   background-color: lightpink;
-  width: 400px;
-}
-
-#lower{
   font-size: 15px;
+  margin: auto;
+  width: 450px;
 }
 
 #abs_workout{
-  font-size: 15px;
-  text-align: left;
   background-color: lightgreen;
-  width: 400px;
-}
-
-#abs{
   font-size: 15px;
-  text-justify: center;
-  /* text-align: center; */
+  margin: auto;
+  width: 450px;
 }
-
 
 #modal {
   display: inline;
-  margin-left: 5px;
+  margin-left: 50px;
 }

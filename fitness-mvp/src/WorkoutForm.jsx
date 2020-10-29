@@ -6,7 +6,7 @@ const WorkoutForm = (props) => {
   console.log('props from ModalWindow:', props);
   return (
     <Form onSubmit={props.submitWorkoutValue}>
-      <Form.Group controlId="formGridCategory">
+      <Form.Group controlId="exerciseOne">
       <Form.Label>Workout ID</Form.Label>
         <Form.Control
         type="text"
@@ -43,7 +43,7 @@ const WorkoutForm = (props) => {
          onChange={props.changeRoundsValue}/>
       </Form.Group>
       <br></br>
-      <Form.Group controlId="formGridCategory">
+      <Form.Group controlId="exerciseTwo">
       <Form.Label>Workout ID</Form.Label>
         <Form.Control
         type="text"
@@ -80,7 +80,7 @@ const WorkoutForm = (props) => {
          onChange={props.changeRoundsValue}/>
       </Form.Group>
       <br></br>
-      <Form.Group controlId="formGridCategory">
+      <Form.Group controlId="exerciseThree">
       <Form.Label>Workout ID</Form.Label>
         <Form.Control
         type="text"
@@ -117,7 +117,7 @@ const WorkoutForm = (props) => {
          onChange={props.changeRoundsValue}/>
       </Form.Group>
       <br></br>
-      <Form.Group controlId="formGridCategory">
+      <Form.Group controlId="exerciseFour">
       <Form.Label>Workout ID</Form.Label>
         <Form.Control
         type="text"
@@ -154,7 +154,7 @@ const WorkoutForm = (props) => {
          onChange={props.changeRoundsValue}/>
       </Form.Group>
       <br></br>
-      <Form.Group controlId="formGridCategory">
+      <Form.Group controlId="exerciseFive">
       <Form.Label>Workout ID</Form.Label>
         <Form.Control
         type="text"

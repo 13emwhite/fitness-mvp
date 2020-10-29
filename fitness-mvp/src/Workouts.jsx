@@ -8,9 +8,9 @@ const Workouts = (props) => {
   var upper = props.workoutList.map(item => {
     return(
       <div>
-        <UpperBody item={item} id="upper"/>
-        <LowerBody item={item} id="lower"/>
-        <Abs item={item} id="abs"/>
+        <UpperBody item={item}/>
+        <LowerBody item={item}/>
+        <Abs item={item}/>
       </div>
     )
   })
