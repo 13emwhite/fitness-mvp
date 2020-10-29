@@ -4,42 +4,41 @@
 
 /* upper body: */
 #upper_workout{
-  font-size: 20px;
+  font-size: 15px;
   text-align: left;
   background-color: lightblue;
   width: 400px;
 }
 
 #upper{
-  font-size: 20px;
+  font-size: 15px;
 }
 
 /* lower body: */
 #lower_workout{
-  font-size: 20px;
-  text-align: center;
+  font-size: 15px;
+  text-align: left;
   background-color: lightpink;
   width: 400px;
 }
 
 #lower{
-  font-size: 20px;
+  font-size: 15px;
 }
 
 #abs_workout{
-  font-size: 20px;
-  text-align: center;
+  font-size: 15px;
+  text-align: left;
   background-color: lightgreen;
   width: 400px;
 }
 
 #abs{
-  font-size: 20px;
+  font-size: 15px;
+  text-justify: center;
+  /* text-align: center; */
 }
 
-/* #table{
-
-} */
 
 #modal {
   display: inline;

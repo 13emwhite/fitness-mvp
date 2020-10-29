@@ -26,36 +26,18 @@ var allWorkouts = function(callback) {
   })
 }
 
-// get workouts based off workout id
-// var selectWorkoutId = function(id, callback) {
-//   connection.query(`SELECT * FROM workouts WHERE id=?`, [id], function(error, results) {
-//     if (error) {
-//       callback(error, null);
-//     } else {
-//       callback(null, results);
-//     }
-//   })
-// }
-
-// get all upper body workouts
-// var categoryWorkout = function(category, callback) {
-//   connection.query(`SELECT * FROM workouts WHERE category=?`, [category], function(error, results) {
-//     if (error) {
-//       callback(error, null);
-//     } else {
-//       callback(null, results);
-//     }
-//   })
-// }
-
-// get all lower body workouts
-
-// get all abs workouts
-
 // post a new workout
+var addNewWorkout = function(id, category, exercise, reps, rounds, callback) {
+  connetion.query(`INSERT INTO workouts (workout_id, category, exercise, reps, rounds) VALUES ("${id}", "${category}", "${exercise}", "${reps}", "${rounds}")`, function(error, results) {
+    if (error) {
+      callback(error, null);
+    } else {
+      callback(null, results);
+    }
+  })
+}
 
 module.exports = {
   allWorkouts,
-  // selectWorkoutId,
-  // categoryWorkout
+  addNewWorkout
 };

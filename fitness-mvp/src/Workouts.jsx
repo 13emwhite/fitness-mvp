@@ -4,7 +4,6 @@ import LowerBody from './LowerBody.jsx';
 import Abs from './Abs.jsx';
 
 const Workouts = (props) => {
-  // console.log('props from app:', props);
 
   var upper = props.workoutList.map(item => {
     return(

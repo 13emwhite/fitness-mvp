@@ -2,33 +2,35 @@ import React from 'react';
 import axios from 'axios';
 import Workouts from './Workouts.jsx';
 import ModalWindow from './ModalWindow.jsx';
-
-import './App.css';
-
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
-
-// import Container from 'react-bootstrap/Container'
-// import Row from 'react-bootstrap/Row'
-// import Col from 'react-bootstrap/Col'
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       workouts: [],
-      // workoutGroup: [],
-      // category: []
+      workout_id: "",
+      category: "",
+      exercise: "",
+      reps: "",
+      rounds: ""
     }
 
     this.getWorkouts = this.getWorkouts.bind(this);
-    // this.getWorkout = this.getWorkout.bind(this);
-    // this.getCategory = this.getCategory.bind(this);
+
+    this.addWorkouts = this.addWorkouts.bind(this);
+    this.addWorkoutCategory = this.addWorkoutCategory.bind(this);
+    this.addWorkoutExercise = this.addWorkoutExercise.bind(this);
+    this.addWorkoutReps = this.addWorkoutReps.bind(this);
+    this.addWorkoutRounds = this.addWorkoutRounds.bind(this);
+
+    this.submitNewWorkout = this.submitNewWorkout.bind(this);
   }
 
   componentDidMount() {
     this.getWorkouts();
   }
-
 
   getWorkouts() {
     axios.get('http://localhost:3003/workouts')
@@ -42,40 +44,72 @@ class App extends React.Component {
     })
   }
 
+  addWorkouts() {
+    axios.post('http://localhost:3003/workouts', {
+      workout_id: this.state.workout_id,
+      category: this.state.category,
+      exercise: this.state.exercise,
+      reps: this.state.reps,
+      rounds: this.state.rounds
+    })
+    .then(results => {
+      console.log('results from post:', results)
+      // this.getWorkouts();
+    })
+    .catch(error => {
+      console.log('error adding workout')
+    })
+  }
 
-  // getWorkout(id) {
-  //   axios.get(`http://localhost:3003/workouts/:${id}`)
-  //   .then(results => {
-  //     this.setState({workoutGroup: results.data}, () => {
-  //       console.log('new workoutGroup state:', this.state.workoutGroup)
-  //     })
-  //   })
-  //   .catch(error => {
-  //     console.log('error getting all workouts')
-  //   })
-  // }
+  submitNewWorkout(event) {
+    event.preventDefault();
+    this.addWorkouts();
+  }
 
-  // getCategory(category) {
-  //   axios.get(`http://localhost:3003/workouts/:${category}`)
-  //   .then(results => {
-  //     this.setState({category: results.data}, () => {
-  //       console.log('new category state:', this.state.category)
-  //     })
-  //   })
-  //   .catch(error => {
-  //     console.log('error getting all workouts')
-  //   })
-  // }
+  addWorkoutId(event) {
+    event.preventDefault();
+    this.setState({workout_id: event.target.value})
+  }
+
+  addWorkoutCategory(event) {
+    event.preventDefault();
+    this.setState({category: event.target.value})
+  }
+
+  addWorkoutExercise(event) {
+    event.preventDefault();
+    this.setState({exercise: event.target.value})
+  }
+
+  addWorkoutReps(event) {
+    event.preventDefault();
+    this.setState({reps: event.target.value})
+  }
+
+  addWorkoutRounds(event) {
+    event.preventDefault();
+    this.setState({rounds: event.target.value})
+  }
 
   render() {
     return (
       <div>
         <h1 className='title'><FitnessCenterIcon/> Fitness Improvement Training <FitnessCenterIcon/></h1>
-        {/* <h3>Upper Body</h3> */}
+        <p className='title'>Welcome to FIT, an online platform for all of your workout needs!</p>
         <Workouts workoutList={this.state.workouts}/>
-        {/* <h3>Lower Body</h3> */}
-        {/* <h3>Abs</h3> */}
-        <ModalWindow/>
+        <ModalWindow
+          id={this.state.workout_id}
+          category={this.state.category}
+          exercise={this.state.exercise}
+          reps={this.state.reps}
+          rounds={this.state.rounds}
+          changeId={this.addWorkoutId}
+          changeCategory={this.addWorkoutCategory}
+          changeExercise={this.addWorkoutExercise}
+          changeReps={this.addWorkoutReps}
+          changeRounds={this.addWorkoutRounds}
+          submitWorkout={this.submitNewWorkout}
+        />
       </div>
     );
   }

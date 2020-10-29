@@ -8,8 +8,7 @@ import Favorite from '@material-ui/icons/Favorite';
 import Table from 'react-bootstrap/Table';
 
 const Abs = (props) => {
-  // console.log('props from workouts upper:', props);
-
+  
   const AbsOne = () => {
     if (props.item.category === 'Abs' && props.item.workout_id === 5) {
       return (
