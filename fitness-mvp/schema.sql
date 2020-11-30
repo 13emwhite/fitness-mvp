@@ -10,7 +10,6 @@ CREATE TABLE workouts (
   instructions
 );
 
--- UPPER BODY
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (1, 'Upper Body', 'Back Extensions', null, 3, 10, null, '1. Lie face down on a mat, with your legs fully extended and your hands supporting your head. 2. Lift your torso up with the help of your back muscles. 3. Hold for a count of 2 and return to the starting position. 4. Repeat until set is complete.');
 
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (1, 'Upper Body', 'Bent Over Rows','Dumbbells', 3, 10, null, '1. Grab a set of dumbbells, bend your torso forward and keep your knees slightly bent. 2. Pull the dumbbells toward your waistline, while squeezing your shoulder blades. 3. Slowly lower the weights to the starting position. A 1-second pull, 1-second pause, 2 second down count is ideal. 4. Repeat.');
@@ -31,7 +30,6 @@ INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, h
 
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (1, 'Upper Body', 'Tricep Extensions','Dumbbells', 3, 10, null, '1. Grab a dumbbell and stand straight with your feet shoulder-width apart. 2. Raise your arms and, with your elbows pointing forward, start lowering the dumbbell. 3. Slowly raise the dumbbell to the starting position and squeeze the triceps. 4. Repeat.');
 
--- LOWER BODY
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (2, 'Lower Body', 'Calf Raises', null, 4, 8, null, '1. Stand with your torso upright, your feet hip-width apart and your toes pointing forward. 2. Raise your heels off the floor and squeeze your calves. 3. Return to the starting position, by slowly lowering your heels, and repeat.');
 
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (2, 'Lower Body', 'Good Mornings', null, 4, 8, null, '1. Stand up tall with your feet shoulder-width apart and place your hands behind the head. 2. Start bending at the hips, push your hips back and bend over to near parallel. 3. Return to the starting position and repeat.');
@@ -52,7 +50,6 @@ INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, h
 
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (2, 'Lower Body', 'Reverse Lunge Kickbacks', null, 4, 8, null, '1. Start with your feet hip-width apart, take a step back with your right leg, and lunge. 2. As you come back up, kick your right leg back and squeeze the glutes. 3. Return to the starting position and repeat with the left leg. 4. Keep alternating legs until the set is complete.');
 
--- ABS
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (3, 'Abs', 'Bicycle Crunches', 'mat', 3, 12, null, '1. Lie on your back, lift your shoulders off the mat and raise both legs. 2. Bring one knee and the opposing elbow close to each other by crunching to one side, and fully extend the other leg. 3. Return to the starting position and then crunch to the opposite side. 4. Repeat until the set is complete.');
 
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (3, 'Abs', 'Bird Dogs', 'mat', 3, 12, null, '1. Start on your hands and knees with the hands under the shoulders and the knees under the hips. 2. Extend one leg and the opposite arm at the same time. 3. Pause for 3 to 5 seconds, return to the starting position and switch sides. 4. Continue alternating sides until set is complete.');
@@ -73,7 +70,6 @@ INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, h
 
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (3, 'Abs', 'Suitcases', 'mat', 3, 12, null, '1. Sit down on the mat with your knees bent, your hands hugging your knees and lift your feet off the floor. 2. Open your arms, extend your legs to a 45-degree angle and lean back. 3. Lift your torso, bend your knees, and return to the starting position. 4. Repeat.');
 
--- YOGA
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Yoga', 'Chair Pose', 'mat', null, null, 30, '1. Start in Mountain Pose and, as you inhale, bring your arms up, with the palms facing each other. 2. As you exhale, bend your knees and sit back. 3. Stay in chair pose for 30 seconds.');
 
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Yoga', 'Childs Pose', 'mat', null, null, 30, '1. Get down on your hands and knees. 2. Sit on your heels, separate the knees, lay your torso down and stretch your arms in front of you. 3. Rest your forehead on the mat and relax for 30 seconds.');
@@ -94,26 +90,26 @@ INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, h
 
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Yoga', 'Warrior Pose', 'mat', null, null, 30, '1. Start in mountain pose, step back with your left foot and rotate your back toes, so that they point to the left front corner of the mat. 2. Bend your right knee, keeping it in line with the ankle, and point the toes straight ahead. 3. Bring the arms up and overhead with the palms facing inward. 4. Hold the pose for 30 seconds and then return to mountain pose. 5. Repeat on the opposite side.');
 
--- STRETCHING
-INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Stretching', 'Back Stretch', 'mat', null, null, 30, '1. Start on all fours, positioning your hands directly under your shoulders and your knees under your hips. 2. Drop your head and pull the abs in, rounding your back and neck. 3. Hold for 30 seconds. 4. Raise your head and curve your back down toward the floor. 5. Hold for another 30 seconds and repeat.');
 
-INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Stretching', 'Bicep Stretch','mat', null, null, 30, '1. Stand straight and clasp your hands behind your back. 2. Straighten your arms and rotate your hands, so that the palms face downward. 3. Raise your arms and hold for 30 seconds.');
+INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (5, 'Stretching', 'Back Stretch', 'mat', null, null, 30, '1. Start on all fours, positioning your hands directly under your shoulders and your knees under your hips. 2. Drop your head and pull the abs in, rounding your back and neck. 3. Hold for 30 seconds. 4. Raise your head and curve your back down toward the floor. 5. Hold for another 30 seconds and repeat.');
 
-INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Stretching', 'Calf Stretch', 'mat', null, null, 30, '1. Stand holding onto a wall with your arms extended and your toes pointing forward. 2. Extend your right leg back, keeping your right foot flat on the floor. 3. Lean forward and slowly bend your left knee until you feel the stretch in your back calf. 4. Hold the stretch for 30 seconds and repeat on the left leg.');
+INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (5, 'Stretching', 'Bicep Stretch','mat', null, null, 30, '1. Stand straight and clasp your hands behind your back. 2. Straighten your arms and rotate your hands, so that the palms face downward. 3. Raise your arms and hold for 30 seconds.');
 
-INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Stretching', 'Chest Stretch', 'mat', null, null, 30, '1. With the side of your body facing a wall, place your left palm on the wall. 2. Slowly rotate your torso to the right, until you feel the stretch in your chest and in your left shoulder. 3. Hold for 30 seconds and repeat on the right side.');
+INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (5, 'Stretching', 'Calf Stretch', 'mat', null, null, 30, '1. Stand holding onto a wall with your arms extended and your toes pointing forward. 2. Extend your right leg back, keeping your right foot flat on the floor. 3. Lean forward and slowly bend your left knee until you feel the stretch in your back calf. 4. Hold the stretch for 30 seconds and repeat on the left leg.');
 
-INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Stretching', 'Glute Stretch', 'mat', null, null, 30, '1. Lie flat on your back and bend both knees. 2. Cross the right leg over the left and bring both knees toward your chest. 3. Gently pull the left leg toward you until you feel a stretch in your glutes. 4. Hold the stretch for 30 seconds and repeat with the other leg.');
+INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (5, 'Stretching', 'Chest Stretch', 'mat', null, null, 30, '1. With the side of your body facing a wall, place your left palm on the wall. 2. Slowly rotate your torso to the right, until you feel the stretch in your chest and in your left shoulder. 3. Hold for 30 seconds and repeat on the right side.');
 
-INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Stretching', 'Hamstring Stretch', 'mat', null, null, 30, '1. Lie on your back and lift your left leg. 2. Gently pull your thigh toward your chest until you feel a stretch in your hamstrings. 3. Hold the stretch for 30 seconds and then repeat with the other leg.');
+INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (5, 'Stretching', 'Glute Stretch', 'mat', null, null, 30, '1. Lie flat on your back and bend both knees. 2. Cross the right leg over the left and bring both knees toward your chest. 3. Gently pull the left leg toward you until you feel a stretch in your glutes. 4. Hold the stretch for 30 seconds and repeat with the other leg.');
 
-INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Stretching', 'Hip Flexor Stretch', 'mat', null, null, 30, '1. Kneel on your right leg and bend your left leg in front of you at a 90 degree angle. 2. Shift your weight forward until you feel a stretch in your hip. 3. Switch legs and repeat the stretch.');
+INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (5, 'Stretching', 'Hamstring Stretch', 'mat', null, null, 30, '1. Lie on your back and lift your left leg. 2. Gently pull your thigh toward your chest until you feel a stretch in your hamstrings. 3. Hold the stretch for 30 seconds and then repeat with the other leg.');
 
-INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Stretching', 'Quad Stretch', 'mat', null, null, 30, '1. Stand up tall and shift your weight to the right leg. 2. Lift your left foot and grasp it with your left hand. 3. Pull the left foot toward your glutes until you feel the stretch in your quads. 4. Hold the stretch for 30 seconds and repeat with the other leg.');
+INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (5, 'Stretching', 'Hip Flexor Stretch', 'mat', null, null, 30, '1. Kneel on your right leg and bend your left leg in front of you at a 90 degree angle. 2. Shift your weight forward until you feel a stretch in your hip. 3. Switch legs and repeat the stretch.');
 
-INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Stretching', 'Shoulder Stretch','mat', null, null, 30, '1. Bring one arm across your upper body and hold it straight. 2. Grasp the elbow with the other arm and gently pull toward your chest. 3. Hold for 30 seconds and repeat on the other arm.');
+INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (5, 'Stretching', 'Quad Stretch', 'mat', null, null, 30, '1. Stand up tall and shift your weight to the right leg. 2. Lift your left foot and grasp it with your left hand. 3. Pull the left foot toward your glutes until you feel the stretch in your quads. 4. Hold the stretch for 30 seconds and repeat with the other leg.');
 
-INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (4, 'Stretching', 'Tricep Stretch', 'mat', null, null, 30, '1. Stand straight with your feet hip width apart. Lift and bend one arm until your hand is in the middle of the upper back. 2. Grab the elbow with the other hand and gently pull. 3. Hold for 30 seconds and repeat on the other arm.');
+INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (5, 'Stretching', 'Shoulder Stretch','mat', null, null, 30, '1. Bring one arm across your upper body and hold it straight. 2. Grasp the elbow with the other arm and gently pull toward your chest. 3. Hold for 30 seconds and repeat on the other arm.');
+
+INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (5, 'Stretching', 'Tricep Stretch', 'mat', null, null, 30, '1. Stand straight with your feet hip width apart. Lift and bend one arm until your hand is in the middle of the upper back. 2. Grab the elbow with the other hand and gently pull. 3. Hold for 30 seconds and repeat on the other arm.');
 
 
 
