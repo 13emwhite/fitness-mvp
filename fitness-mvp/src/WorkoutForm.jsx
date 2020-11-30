@@ -1,216 +1,66 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { Button } from '@material-ui/core';
+import { TextField } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-const WorkoutForm = (props) => {
-  console.log('props from ModalWindow:', props);
+const WorkoutForm = () => {
+
+  const useStyles = makeStyles((theme) => ({
+    button: {
+      backgroundColor:'#9670ff'
+    },
+    }
+  ));
+
+  const classes = useStyles();
+
   return (
-    <Form onSubmit={props.submitWorkoutValue}>
-      <Form.Group controlId="exerciseOne">
-      <Form.Label>Workout ID</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Workout ID Name"
-        required
-        value={props.idValue}
-        onChange={props.changeIdValue}
-        />
-        <Form.Label>Category</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Category Name"
-        required
-        value={props.categoryValue}
-        onChange={props.changeCategoryValue}
-        />
-        <Form.Label>Exercise</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Exercise Name"
-        required
-        value={props.exerciseValue}
-        onChange={props.changeExerciseValue}
-        />
-        <Form.Label>Reps</Form.Label>
-         <Form.Control
-         type="text"
-         placeholder="Total Reps"
-         required
-         value={props.repsValue}
-         onChange={props.changeRepsValue}
-        />
-        <Form.Label>Rounds</Form.Label>
-         <Form.Control
-         type="text"
-         placeholder="Total Rounds"
-         required
-         value={props.roundsValue}
-         onChange={props.changeRoundsValue}/>
-      </Form.Group>
-      <br></br>
-      <Form.Group controlId="exerciseTwo">
-      <Form.Label>Workout ID</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Workout ID Name"
-        required
-        value={props.idValue}
-        onChange={props.changeIdValue}
-        />
-        <Form.Label>Category</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Category Name"
-        required
-        value={props.categoryValue}
-        onChange={props.changeCategoryValue}
-        />
-        <Form.Label>Exercise</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Exercise Name"
-        required
-        value={props.exerciseValue}
-        onChange={props.changeExerciseValue}
-        />
-        <Form.Label>Reps</Form.Label>
-         <Form.Control
-         type="text"
-         placeholder="Total Reps"
-         required
-         value={props.repsValue}
-         onChange={props.changeRepsValue}
-        />
-        <Form.Label>Rounds</Form.Label>
-         <Form.Control
-         type="text"
-         placeholder="Total Rounds"
-         required
-         value={props.roundsValue}
-         onChange={props.changeRoundsValue}/>
-      </Form.Group>
-      <br></br>
-      <Form.Group controlId="exerciseThree">
-      <Form.Label>Workout ID</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Workout ID Name"
-        required
-        value={props.idValue}
-        onChange={props.changeIdValue}
-        />
-        <Form.Label>Category</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Category Name"
-        required
-        value={props.categoryValue}
-        onChange={props.changeCategoryValue}
-        />
-        <Form.Label>Exercise</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Exercise Name"
-        required
-        value={props.exerciseValue}
-        onChange={props.changeExerciseValue}
-        />
-        <Form.Label>Reps</Form.Label>
-         <Form.Control
-         type="text"
-         placeholder="Total Reps"
-         required
-         value={props.repsValue}
-         onChange={props.changeRepsValue}
-        />
-        <Form.Label>Rounds</Form.Label>
-         <Form.Control
-         type="text"
-         placeholder="Total Rounds"
-         required
-         value={props.roundsValue}
-         onChange={props.changeRoundsValue}/>
-      </Form.Group>
-      <br></br>
-      <Form.Group controlId="exerciseFour">
-      <Form.Label>Workout ID</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Workout ID Name"
-        value={props.idValue}
-        onChange={props.changeIdValue}
-        />
-        <Form.Label>Category</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Category Name"
-        value={props.categoryValue}
-        onChange={props.changeCategoryValue}
-        />
-        <Form.Label>Exercise</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Exercise Name"
-        value={props.exerciseValue}
-        onChange={props.changeExerciseValue}
-        />
-        <Form.Label>Reps</Form.Label>
-         <Form.Control
-         type="text"
-         placeholder="Total Reps"
-         value={props.repsValue}
-         onChange={props.changeRepsValue}
-        />
-        <Form.Label>Rounds</Form.Label>
-         <Form.Control
-         type="text"
-         placeholder="Total Rounds"
-         value={props.roundsValue}
-         onChange={props.changeRoundsValue}/>
-      </Form.Group>
-      <br></br>
-      <Form.Group controlId="exerciseFive">
-      <Form.Label>Workout ID</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Workout ID Name"
-        value={props.idValue}
-        onChange={props.changeIdValue}
-        />
-        <Form.Label>Category</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Category Name"
-        value={props.categoryValue}
-        onChange={props.changeCategoryValue}
-        />
-        <Form.Label>Exercise</Form.Label>
-        <Form.Control
-        type="text"
-        placeholder="Exercise Name"
-        value={props.exerciseValue}
-        onChange={props.changeExerciseValue}
-        />
-        <Form.Label>Reps</Form.Label>
-         <Form.Control
-         type="text"
-         placeholder="Total Reps"
-         value={props.repsValue}
-         onChange={props.changeRepsValue}
-        />
-        <Form.Label>Rounds</Form.Label>
-         <Form.Control
-         type="text"
-         placeholder="Total Rounds"
-         value={props.roundsValue}
-         onChange={props.changeRoundsValue}/>
-      </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
-</Form>
+    <form>
+    <TextField
+      required
+      type="text"
+      label="Workout Category"
+      variant="outlined"
+      size="small"
+    />
+    <TextField
+      required
+      label="Exercise Name"
+      variant="outlined"
+      size="small"
+    />
+    <TextField
+      required
+      label="Equipment Needed"
+      variant="outlined"
+      size="small"
+    />
+    <TextField
+      required
+      type="number"
+      defaultValue="8"
+      label="Number of Reps"
+      variant="outlined"
+      size="small"
+    />
+    <TextField
+      required
+      type="number"
+      defaultValue="3"
+      label="Number of Rounds"
+      variant="outlined"
+      size="small"
+    />
+    <TextField
+      required
+      label="Exercise Instructions"
+      multiline
+      rows={4}
+      variant="outlined"
+      size="small"
+    />
+  </form>
   )
 }
 
 export default WorkoutForm;
-

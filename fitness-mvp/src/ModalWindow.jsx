@@ -1,49 +1,93 @@
-import React, {useState} from 'react';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import React from 'react';
 import WorkoutForm from './WorkoutForm.jsx';
+import { Button } from '@material-ui/core';
+import { Modal } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-const ModalWindow= (props) => {
-  console.log('props from app:', props);
-  const [show, setShow] = useState(false);
+function rand() {
+  return Math.round(Math.random() * 20) - 10;
+}
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+function getModalStyle() {
+  const top = 50 + rand();
+  const left = 50 + rand();
+
+  return {
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`,
+  };
+}
+
+const useStyles = makeStyles((theme) => ({
+  title:{
+    textAlign: 'center'
+  },
+  button: {
+    backgroundColor:'#9670ff',
+    margin: '5px'
+  },
+  paper: {
+    position: 'absolute',
+    width: 1000,
+    height: 300,
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
+}));
+
+const ModalWindow = () => {
+  const classes = useStyles();
+
+  const [modalStyle] = React.useState(getModalStyle);
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const body = (
+    <div style={modalStyle} className={classes.paper}>
+      <h2 id="simple-modal-title" className={classes.title}>Create A Workout</h2>
+      <WorkoutForm/>
+      <br></br>
+      <br></br>
+        <Button
+        type="submit"
+        variant="contained"
+        size="small"
+        className={classes.button}>
+        Submit Workout
+      </Button>
+      <Button
+        type="button"
+        variant="contained"
+        size="small"
+        onClick={handleClose}
+        className={classes.button}>
+        Exit Form
+      </Button>
+    </div>
+  );
 
   return (
-    <div id='modal'>
-
-      <Button variant="primary" onClick={handleShow}>
+    <div>
+      <Button variant="contained" size="small" type="button" onClick={handleOpen} className={classes.button}>
         Add Workout
       </Button>
-
-      <Modal show={show} onHide={handleClose}
-      size="small"
-      aria-labelledby="contained-modal-title-vcenter"
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
       >
-        <Modal.Header>
-          <Modal.Title>Create Workout</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <WorkoutForm
-          idValue={props.id}
-          categoryValue={props.category}
-          exerciseValue={props.exercise}
-          repsValue={props.reps}
-          roundsValue={props.rounds}
-          changeIdValue={props.addWorkoutId}
-          changeCategoryValue={props.addWorkoutCategory}
-          changeExerciseValue={props.addWorkoutExercise}
-          changeRepsValue={props.addWorkoutReps}
-          changeRoundsValue={props.addWorkoutRounds}
-          submitWorkoutValue={props.submitWorkout}
-          />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
+        {body}
       </Modal>
     </div>
   );
