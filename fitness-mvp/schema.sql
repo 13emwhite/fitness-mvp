@@ -1,3 +1,11 @@
+DROP DATABASE fitness;
+
+CREATE DATABASE fitness;
+
+USE fitness;
+
+DROP TABLE workouts;
+
 CREATE TABLE workouts (
   id integer AUTO_INCREMENT PRIMARY KEY,
   workout_id integer,
@@ -7,7 +15,7 @@ CREATE TABLE workouts (
   rounds integer,
   reps integer,
   hold integer,
-  instructions
+  instructions varchar(1000)
 );
 
 INSERT INTO workouts (workout_id, category, exercise, equipment, rounds, reps, hold, instructions) VALUES (1, 'Upper Body', 'Back Extensions', null, 3, 10, null, '1. Lie face down on a mat, with your legs fully extended and your hands supporting your head. 2. Lift your torso up with the help of your back muscles. 3. Hold for a count of 2 and return to the starting position. 4. Repeat until set is complete.');
