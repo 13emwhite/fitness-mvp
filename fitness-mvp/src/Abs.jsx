@@ -7,24 +7,41 @@ import { Checkbox } from '@material-ui/core';
 import { FormControlLabel } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-
 import Favorite from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
-
 import { makeStyles } from '@material-ui/core/styles';
+import Collapse from '@material-ui/core/Collapse';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import IconButton from '@material-ui/core/IconButton';
 
 
-// Upper Body workouts
- const TestCardOne = (props) => {
-  // console.log('props from workouts file:', props)
+// Ab workouts
+
+ const Abs = (props) => {
 
   const useStyles = makeStyles((theme) => ({
     title: {
       textAlign: 'center',
-    }
+    },
+    expand: {
+      transform: 'rotate(0deg)',
+      marginLeft: 'auto',
+      transition: theme.transitions.create('transform', {
+        duration: theme.transitions.duration.shortest,
+      }),
+    },
+    expandOpen: {
+      transform: 'rotate(180deg)',
+    },
   }));
 
   const classes = useStyles();
+
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
 
   const PurpleCheckbox = withStyles({
     root: {
@@ -67,29 +84,39 @@ import { makeStyles } from '@material-ui/core/styles';
             <strong>Exercise:</strong> {props.info.exercise}
           </Typography>
           <Typography>
-            <strong>Equipment:</strong> Dumbbells
-          </Typography>
-          <Typography>
-          <strong>Reps:</strong>  {props.info.reps}
+            <strong>Equipment:</strong> {props.info.equipment}
           </Typography>
           <Typography>
           <strong>Rounds:</strong>  {props.info.rounds}
           </Typography>
-
           <Typography>
-          <strong>Instructions:</strong>
-            <br></br>
-            Stand straight with a dumbbell in each hand, your feet shoulder-width apart and hands by your sides. Squeeze the biceps and lift the dumbbells. Keep the elbows close to your body and the upper arms stationary, only the forearms should move. Once the dumbbells are at shoulder level, slowly lower the arms to the starting position.
+          <strong>Reps:</strong>  {props.info.reps}
           </Typography>
+          </CardContent>
           <CardActions>
-          <FormControlLabel
-            control={<PurpleCheckbox checked={state.checkedG} onChange={handleChange} name="checkedG" />}
-          />
-          <FormControlLabel
-            control={<PurpleHeart icon={<FavoriteBorder />} checkedIcon={<Favorite />} name="checkedH" />}
-          />
+            <FormControlLabel
+              control={<PurpleCheckbox checked={state.checkedG} onChange={handleChange} name="checkedG" />}
+            />
+            <FormControlLabel
+              control={<PurpleHeart icon={<FavoriteBorder />} checkedIcon={<Favorite />} name="checkedH" />}
+            />
+          <IconButton
+          className={(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+          >
+            <ExpandMoreIcon/>
+          </IconButton>
           </CardActions>
-        </CardContent>
+          <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+          <Typography paragraph><strong>Instructions:</strong></Typography>
+          <Typography paragraph>{props.info.instructions}</Typography>
+          </CardContent>
+          </Collapse>
       </Card>
       <br></br>
       </div>
@@ -99,4 +126,4 @@ import { makeStyles } from '@material-ui/core/styles';
 }
 
 
-export default TestCardOne;
+export default Abs;

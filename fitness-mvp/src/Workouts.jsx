@@ -1,51 +1,67 @@
 import React from 'react';
-import TestCardOne from './TestCardOne.jsx';
-import TestCardTwo from './TestCardTwo.jsx';
-import TestCardThree from './TestCardThree.jsx';
-import TestCardFour from './TestCardFour.jsx';
-import { Container } from '@material-ui/core';
+
+import Abs from './Abs.jsx';
+import LowerBody from './LowerBody.jsx';
+import Stretching from './Stretching.jsx';
+import UpperBody from './UpperBody.jsx';
+import Yoga from './Yoga.jsx';
+
 import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 const Workouts = (props) => {
-  console.log('props from app:', props)
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+    },
+  }));
 
-  let testOne = props.workoutList.map(item => {
-    console.log('item:', item)
-    return <TestCardOne item={(item.workout_id === 1)} info={item}/>
+  const classes = useStyles();
+
+  var upper = props.workoutList.map(item => {
+    return <UpperBody item={(item.workout_id === 1)} info={item} key={item.id}/>
   })
 
-  let testTwo = props.workoutList.map(item => {
+  let lower = props.workoutList.map(item => {
     console.log('item:', item)
-    return <TestCardTwo item={(item.workout_id === 2)} info={item}/>
+    return <LowerBody item={(item.workout_id === 2)} info={item}/>
   })
 
-  let testThree = props.workoutList.map(item => {
+  let abs = props.workoutList.map(item => {
     console.log('item:', item)
-    return <TestCardThree item={(item.workout_id === 3)} info={item}/>
+    return <Abs item={(item.workout_id === 3)} info={item}/>
   })
 
-  let testFour = props.workoutList.map(item => {
+  let yoga = props.workoutList.map(item => {
     console.log('item:', item)
-    return <TestCardFour item={(item.workout_id === 3)} info={item}/>
+    return <Yoga item={(item.workout_id === 4)} info={item}/>
+  })
+
+  let stretch = props.workoutList.map(item => {
+    console.log('item:', item)
+    return <Stretching item={(item.workout_id === 5)} info={item}/>
   })
 
   return (
-    <Container>
-      <Grid container spacing={3}>
-        <Grid item xs={3}>
-          {testOne}
+    <div className={classes.root}>
+      <Grid container justify="center" spacing={2}>
+         <Grid item xs={2}>
+          {upper}
         </Grid>
-        <Grid item xs={3}>
-          {testTwo}
+         <Grid item xs={2}>
+          {lower}
         </Grid>
-        <Grid item xs={3}>
-          {testThree}
+         <Grid item xs={2}>
+          {abs}
         </Grid>
-        <Grid item xs={3}>
-          {testFour}
+         <Grid item xs={2}>
+          {yoga}
+        </Grid>
+         <Grid item xs={2}>
+          {stretch}
         </Grid>
       </Grid>
-    </Container>
+    </div>
   )
 }
 

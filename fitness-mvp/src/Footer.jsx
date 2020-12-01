@@ -7,20 +7,20 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 
 const Footer = () => {
   const useStyles = makeStyles((theme) => ({
-    root: {
+    main: {
       '& > *': {
         margin: theme.spacing(1),
       },
     },
     button: {
       backgroundColor:'#9670ff'
-    },
+    }
     }
   ));
 
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.main}>
       <Button variant="contained" size="small" className={classes.button}>
         <FacebookIcon/>
       </Button>
